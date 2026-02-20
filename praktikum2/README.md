@@ -5,15 +5,15 @@ NIM       : 244107060077 <br>
 Absen     : 10 <br>
 
 <br>
-Soal 1
+<b>SOAL 1</b> <br>
 Modifikasilah kode pada baris 3 di VS Code atau Editor Code favorit Anda berikut ini agar mendapatkan keluaran (output) sesuai yang diminta!
-
+<br>
 ![test](image1.png) 
-
+<br>
 Output yang diminta (Gantilah Fulan dengan nama Anda):
-
+<br>
 ![test](image2.png) 
-
+<br>
 Jawaban soal no 1 <br>
 kode yang telah di modifikasi 
 ![test](image_jaw1.png) 
