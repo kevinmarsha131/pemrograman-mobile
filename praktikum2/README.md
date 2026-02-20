@@ -1,47 +1,63 @@
-# Laporan Praktikum 02 : Pemrograman Dasar Dart Bagian 1
+# Laporan Praktikum 02: Pemrograman Dasar Dart Bagian 1
 
-nama      : Kevin Marsha Hafish Andrika <br>
-NIM       : 244107060077 <br>
-Absen     : 10 <br>
+**Nama** : Kevin Marsha Hafish Andrika  
+**NIM** : 244107060077  
+**Absen**: 10  
 
-<br>
-<b>SOAL 1</b> <br>
+---
+
+## 📋 SOAL 1
 Modifikasilah kode pada baris 3 di VS Code atau Editor Code favorit Anda berikut ini agar mendapatkan keluaran (output) sesuai yang diminta!
 
-![test](image1.png) 
-<br>
-Output yang diminta (Gantilah Fulan dengan nama Anda):
+**Screenshot Soal:** ![test](image1.png) 
 
-![test](image2.png) 
-<br>
-<b>JAWABAN SOAL 1</b>
-<br>
-kode yang telah di modifikasi 
+**Output yang diminta:** ![test](image2.png) 
 
-![test](image_jaw1.png) 
-<br>
-hasil yang di tampilkan adalah 
+### JAWABAN SOAL 1
+**Kode yang telah dimodifikasi:** ![test](image_jaw1.png) 
 
-![test](image_jaw2.png)
-<br>
-<br>
-<b>SOAL 2</b> 
-<br>
-Mengapa sangat penting untuk memahami bahasa pemrograman Dart sebelum kita menggunakan framework Flutter ? Jelaskan!
-<br>
-<b>JAWABAN SOAL NO 2</b>
-<br>
-Belajar Dart sangat penting sebelum menggunakan Flutter karena Flutter dibangun menggunakan bahasa Dart.
+**Hasil yang ditampilkan:** ![test](image_jaw2.png)
 
-kita harus mengerti fitur unik dari dart sepenuhnya memanfaatkan fleksibilitas yang dimiliki oleh Flutter yang dirancang khusus sesuai dengan cara kerja dart, yang nantinya dapat membuat kita agar lebih baik dalam membuat aplikasi flutter
-<br>
-<b>SOAL 3</b> 
-<br>
+---
+
+## 📋 SOAL 2
+Mengapa sangat penting untuk memahami bahasa pemrograman Dart sebelum kita menggunakan framework Flutter? Jelaskan!
+
+### JAWABAN SOAL 2
+Belajar Dart sangat penting sebelum menggunakan Flutter karena Flutter dibangun menggunakan bahasa Dart. 
+
+Kita harus mengerti fitur unik dari Dart untuk sepenuhnya memanfaatkan fleksibilitas yang dimiliki oleh Flutter yang dirancang khusus sesuai dengan cara kerja Dart, yang nantinya dapat membuat kita agar lebih baik dalam membuat aplikasi Flutter.
+
+---
+
+## 📋 SOAL 3
 Rangkumlah materi dari codelab ini menjadi poin-poin penting yang dapat Anda gunakan untuk membantu proses pengembangan aplikasi mobile menggunakan framework Flutter.
-<br>
 
+### JAWABAN SOAL 3
 <br>
-<b>SOAL 4</b> 
+Kemiripan Sintaks: Dart memiliki struktur yang mirip dengan C, Java, dan JavaScript, memudahkan pengembang untuk beradaptasi.
 <br>
-Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan Null Safety dan Late variabel !
+Full Object-Oriented (OO): Semua nilai di Dart adalah objek. Dart mendukung prinsip encapsulation, inheritance, abstraction, dan polymorphism.
+<br>
+Operator sebagai Method: Operator seperti + atau == sebenarnya adalah method dari sebuah class. Contoh: x + y sama dengan memanggil x.+(y).
+<br>
+Pembagian Bilangan Bulat: Dart menggunakan operator ~/ untuk hasil pembagian integer, sementara / selalu menghasilkan double.
+<br>
+Equality (==): Di Dart, == membandingkan isi/nilai variabel, bukan referensi alamat memori (berbeda dengan Java).
+<br>
+Type Safety: Dart memastikan variabel hanya berinteraksi dengan tipe yang kompatibel, sehingga tidak memerlukan operator === seperti pada JavaScript.
+<br>
+Operator Logika: Mendukung standar ! (NOT), || (OR), dan && (AND) untuk tipe data bool.
 
+## 📋 SOAL 4
+Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan **Null Safety** dan **Late variabel**!
+
+### JAWABAN SOAL 4
+
+#### 1. Null Safety
+> **Penjelasan:** #### 2. Late Variable
+> **Penjelasan:** #### Contoh Eksekusi Kode:
+```dart
+void main() {
+  
+}
