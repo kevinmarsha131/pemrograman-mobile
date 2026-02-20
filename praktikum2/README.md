@@ -7,21 +7,21 @@ Absen     : 10 <br>
 <br>
 <b>SOAL 1</b> <br>
 Modifikasilah kode pada baris 3 di VS Code atau Editor Code favorit Anda berikut ini agar mendapatkan keluaran (output) sesuai yang diminta!
-<br>
+
 ![test](image1.png) 
 <br>
 Output yang diminta (Gantilah Fulan dengan nama Anda):
-<br>
+
 ![test](image2.png) 
 <br>
 Jawaban soal no 1 
 <br>
 kode yang telah di modifikasi 
-<br>
+
 ![test](image_jaw1.png) 
 <br>
 hasil yang di tampilkan adalah 
-<br>
+
 ![test](image_jaw2.png)
 <br>
 <br>
