@@ -38,7 +38,6 @@ Kita harus mengerti fitur unik dari Dart untuk sepenuhnya memanfaatkan fleksibil
 Rangkumlah materi dari codelab ini menjadi poin-poin penting yang dapat Anda gunakan untuk membantu proses pengembangan aplikasi mobile menggunakan framework Flutter.
 
 ### JAWABAN SOAL 3
-### JAWABAN SOAL 3
 
 * **Kemiripan Sintaks:** Dart memiliki struktur yang mirip dengan C, Java, dan JavaScript, memudahkan pengembang untuk beradaptasi.
 * **Full Object-Oriented (OO):** Semua nilai di Dart adalah objek. Dart mendukung prinsip *encapsulation, inheritance, abstraction,* dan *polymorphism*.
@@ -54,9 +53,9 @@ Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan **Null Safety** da
 ### JAWABAN SOAL 4
 
 #### 1. Null Safety
-> **Penjelasan:** 
+> **Penjelasan:** Null safety adalah fitur bahasa pemrograman (terutama Dart/Flutter) yang mencegah error null saat aplikasi berjalan (runtime) dengan memastikan variabel tidak bernilai null kecuali diizinkan secara eksplisit.
 #### 2. Late Variable
-> **Penjelasan:** 
+> **Penjelasan:** late variable adalah kata kunci untuk menunda inisialisasi variabel non-nullable hingga saat penggunaan pertama, yang berguna untuk variabel yang nilainya tidak diketahui saat deklarasi tetapi dijamin ada sebelum dipakai. 
 #### Contoh Eksekusi Kode:
 ```dart
 void main() {
