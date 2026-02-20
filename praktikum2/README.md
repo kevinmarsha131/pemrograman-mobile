@@ -46,6 +46,7 @@ Rangkumlah materi dari codelab ini menjadi poin-poin penting yang dapat Anda gun
 * **Type Safety:** Dart memastikan variabel hanya berinteraksi dengan tipe yang kompatibel, sehingga tidak memerlukan operator `===` seperti pada JavaScript.
 * **Operator Logika:** Mendukung standar `!` (NOT), `||` (OR), dan `&&` (AND) untuk tipe data `bool`.
 
+---
 ## SOAL 4
 Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan **Null Safety** dan **Late variabel**!
 
