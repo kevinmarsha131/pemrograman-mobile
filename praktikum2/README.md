@@ -16,9 +16,11 @@ Modifikasilah kode pada baris 3 di VS Code atau Editor Code favorit Anda berikut
 ![test](image2.png) 
 
 ### JAWABAN SOAL 1 <br>
-**Kode yang telah dimodifikasi:** ![test](image_jaw1.png) 
+**Kode yang telah dimodifikasi:** <br>
+![test](image_jaw1.png) 
 
-**Hasil yang ditampilkan:** ![test](image_jaw2.png)
+**Hasil yang ditampilkan:** <br>
+![test](image_jaw2.png)
 
 ---
 
@@ -36,34 +38,15 @@ Kita harus mengerti fitur unik dari Dart untuk sepenuhnya memanfaatkan fleksibil
 Rangkumlah materi dari codelab ini menjadi poin-poin penting yang dapat Anda gunakan untuk membantu proses pengembangan aplikasi mobile menggunakan framework Flutter.
 
 ### JAWABAN SOAL 3
-<br>
-Kemiripan Sintaks:
-<br> 
-Dart memiliki struktur yang mirip dengan C, Java, dan JavaScript, memudahkan pengembang untuk beradaptasi.
-<br>
-Full Object-Oriented (OO): 
-<br>
-Semua nilai di Dart adalah objek. Dart mendukung prinsip encapsulation, inheritance, abstraction, dan polymorphism.
-<br>
-Operator sebagai Method: 
-<br>
-Operator seperti + atau == sebenarnya adalah method dari sebuah class. Contoh: x + y sama dengan memanggil x.+(y).
-<br>
-Pembagian Bilangan Bulat: 
-<br>
-Dart menggunakan operator ~/ untuk hasil pembagian integer, sementara / selalu menghasilkan double.
-<br>
-Equality (==): 
-<br>
-Di Dart, == membandingkan isi/nilai variabel, bukan referensi alamat memori (berbeda dengan Java).
-<br>
-Type Safety: 
-<br>
-Dart memastikan variabel hanya berinteraksi dengan tipe yang kompatibel, sehingga tidak memerlukan operator === seperti pada JavaScript.
-<br>
-Operator Logika: 
-<br>
-Mendukung standar ! (NOT), || (OR), dan && (AND) untuk tipe data bool.
+### JAWABAN SOAL 3
+
+* **Kemiripan Sintaks:** Dart memiliki struktur yang mirip dengan C, Java, dan JavaScript, memudahkan pengembang untuk beradaptasi.
+* **Full Object-Oriented (OO):** Semua nilai di Dart adalah objek. Dart mendukung prinsip *encapsulation, inheritance, abstraction,* dan *polymorphism*.
+* **Operator sebagai Method:** Operator seperti `+` atau `==` sebenarnya adalah *method* dari sebuah *class*. Contoh: `x + y` sama dengan memanggil `x.+(y)`.
+* **Pembagian Bilangan Bulat:** Dart menggunakan operator `~/` untuk hasil pembagian *integer*, sementara `/` selalu menghasilkan *double*.
+* **Equality (==):** Di Dart, `==` membandingkan **isi/nilai** variabel, bukan referensi alamat memori (berbeda dengan Java).
+* **Type Safety:** Dart memastikan variabel hanya berinteraksi dengan tipe yang kompatibel, sehingga tidak memerlukan operator `===` seperti pada JavaScript.
+* **Operator Logika:** Mendukung standar `!` (NOT), `||` (OR), dan `&&` (AND) untuk tipe data `bool`.
 
 ## SOAL 4
 Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan **Null Safety** dan **Late variabel**!
@@ -71,8 +54,10 @@ Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan **Null Safety** da
 ### JAWABAN SOAL 4
 
 #### 1. Null Safety
-> **Penjelasan:** #### 2. Late Variable
-> **Penjelasan:** #### Contoh Eksekusi Kode:
+> **Penjelasan:** 
+#### 2. Late Variable
+> **Penjelasan:** 
+#### Contoh Eksekusi Kode:
 ```dart
 void main() {
   
