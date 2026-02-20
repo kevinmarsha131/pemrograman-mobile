@@ -30,6 +30,7 @@ hasil yang di tampilkan adalah
 Mengapa sangat penting untuk memahami bahasa pemrograman Dart sebelum kita menggunakan framework Flutter ? Jelaskan!
 <br>
 <b>JAWABAN SOAL NO 2</b>
+<br>
 Belajar Dart sangat penting sebelum menggunakan Flutter karena Flutter dibangun menggunakan bahasa Dart.
 
 kita harus mengerti fitur unik dari dart sepenuhnya memanfaatkan fleksibilitas yang dimiliki oleh Flutter yang dirancang khusus sesuai dengan cara kerja dart, yang nantinya dapat membuat kita agar lebih baik dalam membuat aplikasi flutter
@@ -37,7 +38,9 @@ kita harus mengerti fitur unik dari dart sepenuhnya memanfaatkan fleksibilitas y
 <b>SOAL 3</b> 
 <br>
 Rangkumlah materi dari codelab ini menjadi poin-poin penting yang dapat Anda gunakan untuk membantu proses pengembangan aplikasi mobile menggunakan framework Flutter.
+<br>
 
+<br>
 <b>SOAL 4</b> 
 <br>
 Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan Null Safety dan Late variabel !
