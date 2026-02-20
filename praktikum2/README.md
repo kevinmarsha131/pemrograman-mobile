@@ -25,12 +25,18 @@ hasil yang di tampilkan adalah
 ![test](image_jaw2.png)
 <br>
 <br>
-Soal 2
+<b>SOAL 2</b> 
+<br>
+<br>
 Mengapa sangat penting untuk memahami bahasa pemrograman Dart sebelum kita menggunakan framework Flutter ? Jelaskan!
 
-Soal 3
+<b>SOAL 3</b> 
+<br>
+<br>
 Rangkumlah materi dari codelab ini menjadi poin-poin penting yang dapat Anda gunakan untuk membantu proses pengembangan aplikasi mobile menggunakan framework Flutter.
 
-Soal 4
+<b>SOAL 4</b> 
+<br>
+<br>
 Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan Null Safety dan Late variabel !
 
