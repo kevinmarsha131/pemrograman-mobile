@@ -14,11 +14,14 @@ Output yang diminta (Gantilah Fulan dengan nama Anda):
 <br>
 ![test](image2.png) 
 <br>
-Jawaban soal no 1 <br>
+Jawaban soal no 1 
+<br>
 kode yang telah di modifikasi 
+<br>
 ![test](image_jaw1.png) 
 <br>
 hasil yang di tampilkan adalah 
+<br>
 ![test](image_jaw2.png)
 <br>
 <br>
