@@ -9,11 +9,13 @@
 ## SOAL 1
 Modifikasilah kode pada baris 3 di VS Code atau Editor Code favorit Anda berikut ini agar mendapatkan keluaran (output) sesuai yang diminta!
 
-**Screenshot Soal:** ![test](image1.png) 
+**Screenshot Soal:** <br>
+![test](image1.png) 
 
-**Output yang diminta:** ![test](image2.png) 
+**Output yang diminta:** <br>
+![test](image2.png) 
 
-### JAWABAN SOAL 1
+### JAWABAN SOAL 1 <br>
 **Kode yang telah dimodifikasi:** ![test](image_jaw1.png) 
 
 **Hasil yang ditampilkan:** ![test](image_jaw2.png)
