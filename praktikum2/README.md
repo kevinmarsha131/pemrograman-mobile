@@ -53,11 +53,42 @@ Buatlah penjelasan dan contoh eksekusi kode tentang perbedaan **Null Safety** da
 ### JAWABAN SOAL 4
 
 #### 1. Null Safety
-> **Penjelasan:** Null safety adalah fitur bahasa pemrograman (terutama Dart/Flutter) yang mencegah error null saat aplikasi berjalan (runtime) dengan memastikan variabel tidak bernilai null kecuali diizinkan secara eksplisit.
-#### 2. Late Variable
-> **Penjelasan:** late variable adalah kata kunci untuk menunda inisialisasi variabel non-nullable hingga saat penggunaan pertama, yang berguna untuk variabel yang nilainya tidak diketahui saat deklarasi tetapi dijamin ada sebelum dipakai. 
-#### Contoh Eksekusi Kode:
+
+Null Safety memastikan bahwa variabel tidak dapat bernilai `null` kecuali secara eksplisit diizinkan.
+
+**Contoh kode:**
+
 ```dart
 void main() {
-  
+  String? merkMobil;
+  print(merkMobil);
 }
+```
+
+**Penjelasan:**
+
+* `String` tidak boleh bernilai null.
+* `String?` boleh null.
+* Jika variabel non nullable diberi nilai null, akan terjadi compiletime error.
+
+---
+#### 2. Late Variable
+
+`late` digunakan ketika variabel ingin dideklarasikan sekarang tetapi diinisialisasi nanti.
+
+**Contoh kode:**
+
+```dart
+void main() {
+  late String merkMobil;
+
+  merkMobil = "Toyota";
+  print(merkMobil);
+}
+```
+
+**Penjelasan:**
+
+* Variabel tidak langsung diberi nilai saat deklarasi.
+* Harus diinisialisasi sebelum digunakan.
+* Jika dipanggil sebelum diberi nilai, akan muncul runtime error.
