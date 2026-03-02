@@ -151,3 +151,77 @@ Silakan selesaikan Praktikum 1 sampai 3, lalu dokumentasikan berupa screenshot h
 
   ![test](image3_prak2.png) 
 
+ ## PRAKTIKUM 3 : Menerapkan Perulangan 'for' dan 'Break-Continue'
+
+  **Langkah 1 :**
+
+  Ketik atau salin kode program berikut ke dalam fungsi main()
+
+  ```dart
+  void main() {
+    for (Index = 10; index < 27; index) {
+      print(Index);
+    }
+  }  
+  ```
+
+  **Langkah 2 :**
+
+  Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
+
+  pada saat eksekusi kode mengalami error seperti berikut 
+
+  ![test](image1_prak3.png)
+
+  error tersebut di sebabkan karena 'index' belum di deklarasikan dan penulisan 'index' yang menggunakan huruf kapital pada awalannya 
+
+  untuk perbaikan kode yang benar adalah sebagai berikut 
+
+  ```dart
+  void main() {
+    for (int index = 10; index < 27; index ++) {
+      print(index);
+    }
+  } 
+  ```
+
+  untuk output setelah kode di perbaiki adalah sebagai berikut 
+
+
+  ![test](image2_prak3.png)
+
+  **Langkah 3 :**
+
+  Tambahkan kode program berikut di dalam for-loop, lalu coba eksekusi (Run) kode Anda.
+
+  ```dart
+  If (Index == 21) break;
+    Else If (index > 1 || index < 7) continue;
+    print(index);
+  ```
+
+  Apa yang terjadi ? Jika terjadi error, silakan perbaiki namun tetap menggunakan for dan break-continue.
+
+  terjadi error seperti berikut 
+
+  ![test](image3_prak3.png)
+
+  error tersebut disebabkan 
+  * penulisan 'if' dan 'else if' menggunakan huruf kapital pada awalannya sehingga menjadi undefined
+  * penulisan 'index' menggunakan huruf kapital pada awalanya sehingga menjadi undefined
+
+  untuk perbaikan kode yang benar adalah sebagai berikut 
+
+  ```dart
+  void main() {
+    for (int index = 10; index < 27; index++) {
+      if (index == 21) break;
+      else if (index > 1 || index < 7) continue;
+      print(index);
+    }
+  }
+```
+
+untuk output setelah kode di perbaiki adalah sebagai berikut 
+
+![test](image4_prak3.png)
