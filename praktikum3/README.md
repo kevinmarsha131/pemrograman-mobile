@@ -222,6 +222,8 @@ Silakan selesaikan Praktikum 1 sampai 3, lalu dokumentasikan berupa screenshot h
   }
 ```
 
+Karena kondisi 'index > 1 || index < 7' akan selalu bernilai true (karena index dimulai dari 10, maka index > 1 selalu true), maka continue akan selalu dieksekusi dan print(index) tidak akan pernah tercetak. Perulangan berhenti saat 'index' == 21 karena 'break'.
+
 untuk output setelah kode di perbaiki adalah sebagai berikut 
 
 ![test](image4_prak3.png)
