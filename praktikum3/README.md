@@ -227,3 +227,35 @@ Karena kondisi 'index > 1 || index < 7' akan selalu bernilai true (karena index 
 untuk output setelah kode di perbaiki adalah sebagai berikut 
 
 ![test](image4_prak3.png)
+
+## SOAL 2 : 
+
+Buatlah sebuah program yang dapat menampilkan bilangan prima dari angka 0 sampai 201 menggunakan Dart. Ketika bilangan prima ditemukan, maka tampilkan nama lengkap dan NIM Anda.
+
+```dart
+ void main() {
+  String nama = "Kevin Marsha Hafish Andrika";
+  String nim = "244107060077";
+
+  for (int i = 0; i <= 201; i++) {
+    bool isPrima = true;
+
+      for (int j = 2; j * j <= i; j++) {
+        if (i % j == 0) {
+          isPrima = false;
+          break;
+        }
+      }
+
+    if (isPrima) {
+      print("$i : Nama: $nama, NIM: $nim");
+    } else {
+      print("$i");
+    }
+  } 
+} 
+```
+
+untuk output yang di hasilkan adalah 
+
+![test](image1_tugas.png)
