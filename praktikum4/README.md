@@ -288,8 +288,8 @@ untuk output yang dihasilkan adalah sebagai berikut
   ```
 
   untuk output yang di hasilkan yaitu 
-  
-  ![test](image2_prak3,png)
+
+  ![test](image2_prak3.png)
 
 ## Praktikum 4: Eksperimen Tipe Data List: Spread dan Control-flow Operators
 
