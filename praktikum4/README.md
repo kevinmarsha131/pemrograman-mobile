@@ -762,7 +762,7 @@ untuk output yang dihasilkan adalah sebagai berikut
   ```
   untuk output yang di hasilkan 
 
-  ![test](output_soal4)
+  ![test](output_soal4.png)
 
   Konsep ini memungkinkan pola pemrograman yang lebih fleksibel, seperti higher-order functions, callbacks, dan functional programming style yang banyak digunakan dalam Dart modern.
 
