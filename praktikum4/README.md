@@ -543,3 +543,396 @@ untuk output yang dihasilkan adalah sebagai berikut
 
   ketika kode tersebut di jalankan maka akan muncul error
   
+  ![test](langkah2_prak5.png)
+
+  Kode ini mengalami error saat kompilasi karena ada semicolon (;) yang hilang di baris print(record). Setelah ditambahkan, kode berjalan normal.
+
+  Record di Dart adalah tipe data yang bisa menyimpan beberapa nilai dengan tipe berbeda secara bersamaan, mirip tuple. Record bisa punya field positional (berurutan tanpa nama) dan field named (dengan nama). Pada contoh ini, 'first' dan 'last' adalah positional fields, sedangkan a: 2 dan b: true adalah named fields.
+
+  Saat di-print, Dart menampilkan named fields setelah semua positional fields, terlepas dari urutan penulisannya di kode. Jadi meskipun a: 2 ditulis di tengah, outputnya tetap menampilkan positional fields lebih dulu.
+
+  untuk kode yang sudah di perbaiki yaitu
+  ```dart
+    void main(){
+      var record = ('first', a: 2, b: true, 'last');
+      print(record);
+    }
+  ```
+
+  untuk output setelah di perbaiki yaitu 
+
+  ![test](fixLangkah2_prak5.png)
+
+  ### Langkah 3
+
+  Tambahkan kode program berikut di luar scope void main(), lalu coba eksekusi (Run) kode Anda.
+  ```dart
+    (int, int) tukar((int, int) record) {
+    var (a, b) = record;
+    return (b, a);
+  }
+  ```
+  Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Gunakan fungsi tukar() di dalam main() sehingga tampak jelas proses pertukaran value field di dalam Records.
+
+  Kode ini berjalan tanpa error. Fungsi tukar() menerima sebuah Record bertipe (int, int) dan mengembalikan Record baru dengan posisi elemen yang dibalik menggunakan destructuring — var (a, b) = record artinya kita "membongkar" isi record ke dalam dua variabel terpisah a dan b, lalu dikembalikan dalam urutan terbalik (b, a).
+
+  untuk kode yang sudah di tambahkan yaitu 
+  ```dart
+    (int, int) tukar((int, int) record) {
+    var (a, b) = record;
+    return (b, a);
+  }
+
+  void main() {
+    var before = (10, 20);
+    print('Sebelum tukar: $before');
+    var after = tukar(before);
+    print('Sesudah tukar: $after');
+  }
+  ```
+
+  untuk outputnya yaitu
+
+  ![test](langkah3_prak5.png)
+
+  ### Langkah 4
+
+  Tambahkan kode program berikut di dalam scope void main(), lalu coba eksekusi (Run) kode Anda.
+  ```dart
+      //Record type annotation in a variable declaration:
+  (String, int) mahasiswa;
+  print(mahasiswa);
+  ```
+  Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Inisialisasi field nama dan NIM Anda pada variabel record mahasiswa di atas. Dokumentasikan hasilnya dan buat laporannya!
+
+  Kode ini error karena variabel mahasiswa dideklarasikan tapi belum diinisialisasi, kemudian langsung di-print.
+
+  ![test](langkah4_prak5.png)
+
+  untuk kode yang sudah di perbaiki yaitu 
+  ```dart
+    void main() {
+    (String, int) mahasiswa;
+    mahasiswa = ('Kevin Marsha Hafish Andrika', 244107060077);
+    print(mahasiswa);
+  }
+  ```
+
+  untuk output yang di tampilkan yaitu
+  
+  ![test](fixLangkah4_prak5.png)
+
+  ### Langkah 5
+
+  Tambahkan kode program berikut di dalam scope void main(), lalu coba eksekusi (Run) kode Anda.
+  ```dart
+  var mahasiswa2 = ('first', a: 2, b: true, 'last');
+
+  print(mahasiswa2.$1); // Prints 'first'
+  print(mahasiswa2.a); // Prints 2
+  print(mahasiswa2.b); // Prints true
+  print(mahasiswa2.$2); // Prints 'last'
+  ```
+
+  Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Gantilah salah satu isi record dengan nama dan NIM Anda, lalu dokumentasikan hasilnya dan buat laporannya!
+
+  Kode ini berjalan tanpa error. Kode digunakan untuk mengakses field di dalam Record:
+
+  * .$1, .$2, dst. untuk mengakses positional fields berdasarkan urutan (index mulai dari 1)
+  * .namaField untuk mengakses named fields langsung dengan namanya
+
+  setelah kode di perbaiki 
+  ```dart
+    void main() {
+    var mahasiswa2 = ('Kevin Marsha Hafish Andrika', a: 244107060077, b: true, 'SIB-2E');
+
+    print(mahasiswa2.$1); // nama
+    print(mahasiswa2.a);  // NIM
+    print(mahasiswa2.b);  // status aktif
+    print(mahasiswa2.$2); // kelas
+  }
+  ```
+
+  untuk output setelah du ubah 
+
+  ![test](langkah5_prak5.png)
+
+  ## SOAL 2 Jelaskan yang dimaksud Functions dalam bahasa Dart!
+
+  Functions dalam Dart adalah blok kode yang dapat diberi nama dan dipanggil ulang sesuai kebutuhan. Dart merupakan bahasa yang object-oriented, sehingga function pun merupakan objek dengan tipe Function. Artinya function bisa disimpan ke variabel, dijadikan argumen, bahkan dikembalikan sebagai nilai dari function lain.
+
+  Secara umum, function di Dart menggunakan sintaks berikut:
+  ```dart
+  // Deklarasi function dengan tipe return eksplisit
+  int tambah(int a, int b) {
+    return a + b;
+  }
+
+  // Arrow syntax (untuk body satu ekspresi)
+  int kali(int a, int b) => a * b;
+
+  void main() {
+    print(tambah(3, 4)); // 7
+    print(kali(3, 4));   // 12
+  }
+  ```
+  Penulisan tipe return seperti int, String, atau void dianjurkan untuk keterbacaan, meskipun Dart tetap bisa menginferensinya secara otomatis. Jika function tidak mengembalikan nilai apa pun, tipe return-nya adalah void.
+
+  ## SOAL 3 Jelaskan jenis-jenis parameter di Functions beserta contoh sintaksnya!
+
+  Dart mendukung empat jenis parameter, masing-masing dengan peran yang berbeda:
+
+  a. Required Positional Parameter
+  
+  Parameter wajib yang urutan pemberiannya harus sesuai dengan deklarasinya.
+  ```dart
+  String sapa(String nama, int umur) {
+    return 'Halo, $nama! Umurku $umur tahun.';
+  }
+
+  void main() {
+    print(sapa('Kevin', 20));
+  }
+  ```
+
+  b. Optional Positional Parameter
+  
+  Parameter yang boleh tidak diisi, diapit oleh tanda kurung siku []. Bisa diberi nilai default.
+  ```dart
+  String sapa(String nama, [String kota = 'Malang']) {
+    return '$nama dari $kota';
+  }
+
+  void main() {
+    print(sapa('Kevin'));
+    print(sapa('Kevin', 'Batu'));
+  }
+  ```
+
+  c. Named Parameter
+  
+  Parameter yang dipanggil dengan nama, diapit tanda kurung kurawal {}. Secara default bersifat opsional, kecuali ditandai required.
+  ```dart
+  void info({required String nama, int nim = 0}) {
+    print('Nama: $nama, NIM: $nim');
+  }
+
+  void main() {
+    info(nama: 'Kevin', nim: 244107060077);
+    info(nama: 'Kevin');
+  }
+  ```
+
+  d. Parameter dengan Tipe Function (Callback)
+  
+  Parameter yang menerima sebuah function lain sebagai argumen, umum digunakan untuk callback.
+  ```dart
+  void proses(int nilai, int Function(int) operasi) {
+    print(operasi(nilai));
+  }
+
+  void main() {
+    proses(5, (x) => x * x);
+  }
+  ```
+
+  ## SOAL 4 Jelaskan maksud Functions sebagai first-class objects beserta contoh sintaknya!
+
+  First-class object artinya sebuah entitas bisa diperlakukan layaknya nilai biasa: disimpan ke variabel, dijadikan argumen fungsi, maupun dikembalikan dari fungsi lain. Di Dart, function adalah first-class object karena semua itu bisa dilakukan terhadapnya.
+
+  contoh sintaks
+  ```dart
+  int kuadrat(int x) => x * x;
+
+  void main() {
+    var fn = kuadrat;
+    print(fn(4));
+
+    var list = [3, 1, 4, 1, 5];
+    list.sort((a, b) => a.compareTo(b));
+    print(list);
+
+    Function multiplier(int faktor) {
+      return (int x) => x * faktor;
+    }
+
+    var kaliTiga = multiplier(3);
+    print(kaliTiga(7));
+  }
+  ```
+  untuk output yang di hasilkan 
+
+  ![test](output_soal4)
+
+  Konsep ini memungkinkan pola pemrograman yang lebih fleksibel, seperti higher-order functions, callbacks, dan functional programming style yang banyak digunakan dalam Dart modern.
+
+  ## SOAL 5 Apa itu Anonymous Functions? Jelaskan dan berikan contohnya!
+
+  Anonymous Functions (fungsi anonim) adalah function yang tidak memiliki nama. Dalam Dart, bentuk ini sering disebut juga lambda atau closure. Karena tidak punya nama, biasanya langsung digunakan di tempat pembuatannya, misalnya sebagai argumen ke fungsi lain.
+
+  Sintaks umumnya:
+  ```dart
+    (parameter) {
+    // body
+  }
+
+  // Atau versi arrow (satu ekspresi)
+  (parameter) => ekspresi
+  ```
+  Contoh penggunaan nyata:
+  ```dart
+  void main() {
+    // Anonymous function sebagai argumen forEach
+    var angka = [1, 2, 3, 4, 5];
+    angka.forEach((n) {
+      print('Nilai: $n, Kuadrat: ${n * n}');
+    });
+
+    // Disimpan ke variabel
+    var salam = (String nama) => 'Halo, $nama!';
+    print(salam('Kevin')); // Halo, Kevin!
+}
+  ```
+
+  output yang muncul 
+
+  ![test](output_soal5.png)
+
+  Anonymous function sangat praktis saat dibutuhkan logika singkat yang hanya dipakai sekali, sehingga tidak perlu repot membuat function bernama secara tersendiri.
+
+  ## SOAL 6 Jelaskan perbedaan Lexical scope dan Lexical closures! Berikan contohnya!
+
+  Lexical scope
+  Di Dart, cakupan variabel ditentukan oleh tata letak kode dan penggunaan kurung kurawal { }. Setiap pasang kurung kurawal baru membuat "level" scope baru.
+
+  Variabel di scope luar bisa diakses oleh scope di dalamnya.
+
+  Variabel di dalam kurung kurawal tidak bisa diakses dari luar.
+  ```dart
+  void main() {
+    var pesan = "Pesan dari luar";
+
+    void cekScope() {
+      var versi = "1.0";
+      // Fungsi ini bisa akses 'pesan' karena berada di scope induknya
+      print(pesan); 
+      print(versi);
+    }
+
+    cekScope();
+    // print(versi); // Error! 'versi' tidak dikenal di luar fungsi cekScope
+  }
+  ```
+
+  untuk output yang di hasilkan 
+
+  ![test](contoh_lexical_scope.png)
+
+  Lexical closure
+  Closure adalah sebuah objek fungsi yang memiliki akses ke variabel di dalam lexical scope-nya, meskipun fungsi tersebut digunakan di luar scope aslinya.
+
+  Di Dart, fungsi adalah "first-class objects", artinya fungsi bisa disimpan dalam variabel, dipassing sebagai argumen, atau dikembalikan (return) oleh fungsi lain.
+  ```dart
+    Function buatPenambah(int tambahSaku) {
+    // Variabel 'tambahSaku' tertangkap oleh closure di bawah
+    return (int i) => tambahSaku + i;
+  }
+
+  void main() {
+    // buatPenambah(10) mengembalikan sebuah fungsi yang "mengingat" angka 10
+    var tambahSepuluh = buatPenambah(10);
+    
+    // buatPenambah(5) mengembalikan fungsi yang "mengingat" angka 5
+    var tambahLima = buatPenambah(5);
+
+    print(tambahSepuluh(2)); // Hasil: 12
+    print(tambahLima(2));     // Hasil: 7
+  }
+  ```
+
+  untuk output yang dihasilkan
+
+  ![test](contoh_lexical_closure.png)
+
+  
+  ## SOAL 7 Jelaskan dengan contoh cara membuat return multiple value di Functions!
+
+  1. Menggunakan Records (Cara Terbaru & Terbaik)
+
+      Mulai dari Dart 3.0, cara paling efisien dan type-safe adalah menggunakan Records. Ini memungkinkan kamu mengembalikan beberapa nilai tanpa perlu membuat kelas baru.
+
+```dart
+  // Fungsi mengembalikan Record (String, int)
+  (String, int) ambilDataUser() {
+    return ("Alex", 25);
+  }
+
+  void main() {
+    // Destructuring: Langsung pecah nilainya ke variabel baru
+    var (nama, umur) = ambilDataUser();
+    
+    print("Nama: $nama, Umur: $umur");
+  }
+```
+Kelebihan: Sangat cepat, ringan, dan didukung penuh oleh sistem tipe Dart.
+
+2. Menggunakan Named Records
+      Jika kamu ingin nilai yang dikembalikan lebih deskriptif (agar tidak tertukar urutannya), kamu bisa menggunakan named fields dalam Record.
+
+```dart
+  ({double lat, double lng}) ambilLokasi() {
+    return (lat: -7.98, lng: 112.63);
+  }
+
+  void main() {
+    var lokasi = ambilLokasi();
+    print("Latitude: ${lokasi.lat}, Longitude: ${lokasi.lng}");
+  }
+```
+3. Menggunakan List atau Map
+      Ini adalah cara "klasik". Kamu membungkus nilai-nilai tersebut ke dalam koleksi.
+
+      List: Cocok jika tipe datanya sama.
+
+      Map: Cocok jika ingin memberi label pada setiap nilai (namun tidak type-safe untuk tipe data campuran).
+
+```dart
+  // Menggunakan List
+  List<dynamic> getInfo() {
+    return ["Laptop", 15000000];
+  }
+
+  void main() {
+    var info = getInfo();
+    String produk = info[0];
+    int harga = info[1];
+    
+    print("$produk harganya $harga");
+  }
+```
+      Catatan: Menggunakan List<dynamic> kurang disarankan karena kamu kehilangan 
+      pengecekan tipe data otomatis (Bisa menyebabkan error saat runtime).
+
+4. Menggunakan Class (Data Modeling)
+      Jika data yang dikembalikan cukup kompleks dan sering digunakan di banyak tempat, membuat class adalah solusi yang paling rapi dan profesional.
+
+```dart
+  class Result {
+    final bool isSuccess;
+    final String message;
+
+    Result(this.isSuccess, this.message);
+  }
+
+  Result login() {
+    // Logika login...
+    return Result(true, "Login Berhasil");
+  }
+
+  void main() {
+    var res = login();
+    if (res.isSuccess) {
+      print(res.message);
+    }
+  }
+```
