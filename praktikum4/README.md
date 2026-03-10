@@ -34,7 +34,7 @@ Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jela
 
 kode ketika di jalankan pada darpad maka akan mengeluarkan output seperti berikut 
 
-![test](image1_prak1)
+![test](image1_prak1.png)
 
 yang terjadi pada kode tersebut yaitu 
 
@@ -77,7 +77,7 @@ kode yang telah di ubah
 
 kode tersebut mengalami error seperti ini 
 
-![test](image2_prak1)
+![test](image2_prak1.png)
 
 Hal ini terjadi karena List.filled(5, null) tanpa tipe eksplisit menyebabkan Dart menginferensi tipe list menjadi List<Null>. Akibatnya, elemen-elemen dalam list hanya dapat menyimpan nilai null, sehingga ketika mencoba mengisinya dengan String, Dart langsung menolaknya dan terjadi error.
 
@@ -104,7 +104,7 @@ untuk kode yang telah di perbaiki yaitu
 
 untuk output yang dihasilkan adalah sebagai berikut 
 
-![test](image3_prak1)
+![test](image3_prak1.png)
 
 ## Praktikum 2: Eksperimen Tipe Data Set
 
@@ -124,7 +124,7 @@ untuk output yang dihasilkan adalah sebagai berikut
 
   ketika kode tersebut di run maka akan muncul output seperti berikut 
 
-  ![test](image1_prak2)
+  ![test](image1_prak2.png)
 
   ### Langkah 3
 
@@ -166,7 +166,7 @@ untuk output yang dihasilkan adalah sebagai berikut
   ```
 
   untuk output yang akan di tampilkan yaitu 
-  ![test](image2_prak2)
+  ![test](image2_prak2.png)
 
 ## Praktikum 3: Ekperimen Tipe Data Maps
 
@@ -198,7 +198,7 @@ untuk output yang dihasilkan adalah sebagai berikut
 
   untuk output yang di tampilkan yaitu 
 
-  ![test](image1_prak3)
+  ![test](image1_prak3.png)
 
   * gifts: Menggunakan String sebagai kunci (Key).
 
@@ -288,5 +288,238 @@ untuk output yang dihasilkan adalah sebagai berikut
   ```
 
   untuk output yang di hasilkan yaitu 
-  ![test](image2_prak3)
+  ![test](image2_prak3,png)
 
+## Praktikum 4: Eksperimen Tipe Data List: Spread dan Control-flow Operators
+
+  ### Langkah 1
+
+  Ketik atau salin kode program berikut ke dalam fungsi main().
+  ``` dart
+  void main(){
+    var list = [1, 2, 3];
+    var list2 = [0, ...list];
+    print(list1);
+    print(list2);
+    print(list2.length);
+  }
+  ```
+
+  ### Langkah 2
+
+  Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
+
+  pada saat kode tersebut di run maka akan muncul error yaitu 
+
+  ![test](image1_prak4.png)
+
+  error tersebut terjadi dikarenakan list1 tidak ada dan belum di definisikan Selain itu, pada syntax [0, ...list] menggunakan Spread Operator (...). Operator ini "membuka" isi list dan memasukkan semua elemennya ke dalam list baru secara berurutan. Jadi [0, ...list] hasilnya adalah [0, 1, 2, 3], bukan nested list.
+
+  kode setelah di perbaiki yaitu 
+  ```dart
+  void main(){
+    var list = [1, 2, 3];
+    var list2 = [0, ...list];
+    print(list);
+    print(list2);
+    print(list2.length);
+  }
+  ```
+
+  untuk output yang di tampilkan setelah kode di perbaiki yaitu
+
+  ![test](image2_prak4.png)
+
+  ### Langkah 3
+
+  Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
+  ```dart
+    list1 = [1, 2, null];
+    print(list1);
+    var list3 = [0, ...?list1];
+    print(list3.length);
+  ```
+
+  Apa yang terjadi ? Jika terjadi error, silakan perbaiki.
+
+  Tambahkan variabel list berisi NIM Anda menggunakan Spread Operators. Dokumentasikan hasilnya dan buat laporannya!
+
+  Kode tersebut punya dua masalah.
+
+  1. Variabel list bernama list1 tidak terdefinisi sama seperti sebelumnya, harusnya list.
+  2. Jika kita assign [1, 2, null] ke variabel list yang sudah ada (bertipe List<int>), Dart akan error karena null tidak bisa masuk ke List<int>.
+
+  Solusinya adalah ubah tipe variabelnya menjadi List<int?> atau mendeklarasikan variabel list1.
+
+  ![test](image3_prak4.png)
+
+  untuk kode yang sudah di perbaiki yaitu 
+  ```dart
+  void main(){
+    var list = [1, 2, 3];
+    var list2 = [0, ...list];
+    print('ini list');
+    print(list);
+    print('ini list2');
+    print(list2);
+    print('ini list.length');
+    print(list2.length);
+    
+    var list1 = [1, 2, null];
+    print('ini list1');
+    print(list1);
+    var list3 = [0, ...?list1];
+    print('ini list3');
+    print(list3.length);
+    
+    var charNIM = [2, 4, 4, 1, 0, 7, 0, 6, 0, 0, 7, 7];
+    var nim = [...charNIM];
+    print('ini nim');
+    print (nim);
+  }
+  ```
+
+  untuk output yang di tampilkan yaitu 
+
+  ![test](image4_prak4.png)
+
+  ### Langkah 4 
+
+  Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
+  ```dart
+    var nav = ['Home', 'Furniture', 'Plants', if (promoActive) 'Outlet'];
+    print(nav);
+  ```
+
+  Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Tunjukkan hasilnya jika variabel promoActive ketika true dan false.
+
+  ketika kode di jalankan maka akan muncul error yaitu
+
+  ![test](image5_prak4.png)
+
+  error tersebut terjadi karena promoActive belum di deklarasikan 
+
+  untuk kode setelah di perbaiki yaitu 
+  ```dart
+  void main(){
+    var list = [1, 2, 3];
+    var list2 = [0, ...list];
+    print('ini list');
+    print(list);
+    print('ini list2');
+    print(list2);
+    print('ini list.length');
+    print(list2.length);
+    
+    var list1 = [1, 2, null];
+    print('ini list1');
+    print(list1);
+    var list3 = [0, ...?list1];
+    print('ini list3');
+    print(list3.length);
+    
+    var charNIM = [2, 4, 4, 1, 0, 7, 0, 6, 0, 0, 7, 7];
+    var nim = [...charNIM];
+    print('ini nim');
+    print (nim);
+    
+    bool promoActive = true;
+    var nav = ['Home', 'Furniture', 'Plants', if (promoActive) 'Outlet'];
+    print ('ini nav');
+    print(nav);
+  }
+  ```
+
+  untuk output yang di tampilkan yaitu 
+
+  ketika true
+
+  ![test](image6_prak4.png)
+
+  ketika false
+
+  ![test](image7_prak4.png)
+
+  ### Langkah 5
+
+  Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
+  ```dart
+    var nav2 = ['Home', 'Furniture', 'Plants', if (login case 'Manager') 'Inventory'];
+    print(nav2);
+  ```
+
+  Apa yang terjadi ? Jika terjadi error, silakan perbaiki. Tunjukkan hasilnya jika variabel login mempunyai kondisi lain.
+
+  ketika kode tersebut di tambahkan dan di jalankan maka akan terjadi error 
+
+  ![test](image1_prak5.png)
+
+  error tersebut terjadi di karenakan login belum di deklarasikan 
+
+  untuk kode setelah di perbaiki yaitu 
+  ```dart
+  void main(){
+    
+    var list = [1, 2, 3];
+    var list2 = [0, ...list];
+    print('ini list');
+    print(list);
+    print('ini list2');
+    print(list2);
+    print('ini list.length');
+    print(list2.length);
+    
+    var list1 = [1, 2, null];
+    print('ini list1');
+    print(list1);
+    var list3 = [0, ...?list1];
+    print('ini list3');
+    print(list3.length);
+    
+    var charNIM = [2, 4, 4, 1, 0, 7, 0, 6, 0, 0, 7, 7];
+    var nim = [...charNIM];
+    print('ini nim');
+    print (nim);
+    
+    bool promoActive = true;
+    var nav = ['Home', 'Furniture', 'Plants', if (promoActive) 'Outlet'];
+    print ('ini nav');
+    print(nav);
+    
+    String login = 'Manager';
+    var nav2 = ['Home', 'Furniture', 'Plants', if (login case 'Manager') 'Inventory'];
+    print('ini nav2');
+    print(nav2);
+    
+    login = 'staff';
+    var nav3 = ['Home', 'Furniture', 'Plants', if (login case 'Manager') 'Inventory'];
+    print('ini nav3');
+    print(nav3);
+  }
+  ```
+
+  untuk output yang di tampilkan yaitu
+  
+  ![test](image2_prak5.png)
+
+  ### Langkah 6
+
+  Tambahkan kode program berikut, lalu coba eksekusi (Run) kode Anda.
+  ```dart
+    var listOfInts = [1, 2, 3];
+    var listOfStrings = ['#0', for (var i in listOfInts) '#$i'];
+    assert(listOfStrings[1] == '#1');
+    print(listOfStrings);
+  ```
+
+  untuk output yang di tampilkan yaitu 
+  
+  ![test](image1_prak6.png)
+
+  Kode ini berjalan baik tanpa error. Fitur yang digunakan adalah Collection For,dimana kita bisa mengisi elemen list secara otomatis menggunakan perulangan for langsung di dalam literal list.
+
+  Manfaat Collection for sangat berguna ketika ingin membuat list baru berdasarkan elemen dari list lain, tanpa perlu menulis loop terpisah di luar.
+
+  Pada contoh ini, for (var i in listOfInts) '#$i' akan menghasilkan '#1', '#2', '#3' secara berurutan, lalu digabungkan dengan elemen pertama '#0', sehingga hasilnya adalah ['#0', '#1', '#2', '#3'].
+
+  Fungsi assert(listOfStrings[1] == '#1') pada kode tersebut bertugas memverifikasi bahwa elemen di indeks ke-1 dari listOfStrings bernilai '#1'. Kalau kondisi ini tidak terpenuhi, program akan melempar AssertionError di mode debug. Karena Collection For menghasilkan elemen secara berurutan mulai dari '#1', kondisi ini benar dan program berjalan normal.
