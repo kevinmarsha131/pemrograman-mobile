@@ -166,6 +166,7 @@ untuk output yang dihasilkan adalah sebagai berikut
   ```
 
   untuk output yang akan di tampilkan yaitu 
+  
   ![test](image2_prak2.png)
 
 ## Praktikum 3: Ekperimen Tipe Data Maps
