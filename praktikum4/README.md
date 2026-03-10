@@ -540,4 +540,5 @@ untuk output yang dihasilkan adalah sebagai berikut
 
   Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
 
-  ketika kode tersebut di jalankan maka akan muncul
+  ketika kode tersebut di jalankan maka akan muncul error
+  
