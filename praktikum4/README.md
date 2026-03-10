@@ -523,3 +523,20 @@ untuk output yang dihasilkan adalah sebagai berikut
   Pada contoh ini, for (var i in listOfInts) '#$i' akan menghasilkan '#1', '#2', '#3' secara berurutan, lalu digabungkan dengan elemen pertama '#0', sehingga hasilnya adalah ['#0', '#1', '#2', '#3'].
 
   Fungsi assert(listOfStrings[1] == '#1') pada kode tersebut bertugas memverifikasi bahwa elemen di indeks ke-1 dari listOfStrings bernilai '#1'. Kalau kondisi ini tidak terpenuhi, program akan melempar AssertionError di mode debug. Karena Collection For menghasilkan elemen secara berurutan mulai dari '#1', kondisi ini benar dan program berjalan normal.
+
+## Praktikum 5: Eksperimen Tipe Data Records
+
+  ### Langkah 1
+
+  Ketik atau salin kode program berikut ke dalam fungsi main().
+  ```dart
+    void main(){
+      var record = ('first', a: 2, b: true, 'last');
+      print(record)
+    }
+  ```
+  ### Langkah 2
+
+  Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
+
+  ketika kode tersebut di jalankan maka akan muncul
