@@ -248,12 +248,11 @@ Contoh nama file gambar di atas adalah gunung.jpeg
 Tambahkan aset gambar ke dalam body seperti berikut:
 
 ```dart
-    return MaterialApp(
-      title: 'Flutter layout: Nama dan NIM Anda',
+   return MaterialApp(
+      title: 'Flutter layout: Kevin marsha Hafish Andrika - 244107060077',
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter layout demo'),
-        ),
+        appBar: AppBar(title: const Text('Flutter layout demo')),
+        // 3. Masukkan semua section ke dalam Column di body
         body: Column(
           children: [
             Image.asset(
@@ -262,11 +261,9 @@ Tambahkan aset gambar ke dalam body seperti berikut:
               height: 240,
               fit: BoxFit.cover,
             ),
-            titleSection,
+            titleSection, 
             buttonSection,
-            textSection,
-          ],
-        ),
+            textSection]),
       ),
     );
 ```
@@ -278,7 +275,12 @@ BoxFit.cover memberi tahu kerangka kerja bahwa gambar harus sekecil mungkin teta
 ### Langkah 3: Terakhir, ubah menjadi ListView
 Pada langkah terakhir ini, atur semua elemen dalam ListView, bukan Column, karena ListView mendukung scroll yang dinamis saat aplikasi dijalankan pada perangkat yang resolusinya lebih kecil.
 ```dart
-body: ListView(
+    return MaterialApp(
+      title: 'Flutter layout: Kevin marsha Hafish Andrika - 244107060077',
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Flutter layout demo')),
+        // 3. Masukkan semua section ke dalam Column di body
+        body: ListView(
           children: [
             Image.asset(
               'assets/images/gunung.jpeg',
@@ -286,11 +288,11 @@ body: ListView(
               height: 240,
               fit: BoxFit.cover,
             ),
-            titleSection,
+            titleSection, 
             buttonSection,
-            textSection,
-          ],
-        ),
+            textSection]),
+      ),
+    );
 ```
 
 ![gambar 6](assets/praktikum_4/langkah_3.png)
@@ -309,12 +311,79 @@ Sebelum melanjutkan praktikum, buatlah sebuah project baru Flutter dengan nama b
 ### Langkah 2: Mendefinisikan Route
 Buatlah dua buah file dart dengan nama home_page.dart dan item_page.dart pada folder pages. Untuk masing-masing file, deklarasikan class HomePage pada file home_page.dart dan ItemPage pada item_page.dart. Turunkan class dari StatelessWidget. Gambaran potongan kode dapat anda lihat sebagai berikut.
 
-![gambar 8](assets/praktikum_5/langkah_2.png)
+kode pada home_page.dart
+
+```dart
+import 'package:flutter/material.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Home Page'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            // Navigasi ke rute /item yang sudah didefinisikan di main.dart
+            Navigator.pushNamed(context, '/item');
+          },
+          child: const Text('Go to Item Page'),
+        ),
+      ),
+    );
+  }
+}
+```
+
+kode pada item_page.dart
+
+```dart
+import 'package:flutter/material.dart';
+
+class ItemPage extends StatelessWidget {
+  const ItemPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Item Page'),
+      ),
+      body: const Center(
+        child: Text(
+          'Ini adalah Halaman Item',
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+    );
+  }
+}
+```
 
 ### Langkah 3: Lengkapi Kode di main.dart
 Setelah kedua halaman telah dibuat dan didefinisikan, bukalah file main.dart. Pada langkah ini anda akan mendefinisikan Route untuk kedua halaman tersebut. Definisi penamaan route harus bersifat unique. Halaman HomePage didefinisikan sebagai /. Dan halaman ItemPage didefinisikan sebagai /item. Untuk mendefinisikan halaman awal, anda dapat menggunakan named argument initialRoute. Gambaran tahapan ini, dapat anda lihat pada potongan kode berikut.
 
-![gambar 9](assets/praktikum_5/langkah_3.png)
+```dart
+import 'package:flutter/material.dart';
+import 'package:layout_flutter/pages/item_page.dart';
+import 'package:layout_flutter/pages/home_page.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      initialRoute: '/', // Menentukan rute awal aplikasi
+      routes: {
+        '/': (context) => const HomePage(),
+        '/item': (context) => const ItemPage(),
+      },
+    ),
+  );
+}
+```
 
 ### Langkah 4: Membuat data model
 Sebelum melakukan perpindahan halaman dari HomePage ke ItemPage, dibutuhkan proses pemodelan data. Pada desain mockup, dibutuhkan dua informasi yaitu nama dan harga. Untuk menangani hal ini, buatlah sebuah file dengan nama item.dart dan letakkan pada folder models. Pada file ini didefinisikan pemodelan data yang dibutuhkan. Ilustrasi kode yang dibutuhkan, dapat anda lihat pada potongan kode berikut.
@@ -345,7 +414,61 @@ class HomePage extends StatelessWidget {
 ### Langkah 6: Membuat ListView dan itemBuilder
 Untuk menampilkan ListView pada praktikum ini digunakan itemBuilder. Data diambil dari definisi model yang telah dibuat sebelumnya. Untuk menunjukkan batas data satu dan berikutnya digunakan widget Card. Kode yang telah umum pada bagian ini tidak ditampilkan. Gambaran kode yang dibutuhkan dapat anda lihat sebagai berikut.
 
-![gambar 10](assets/praktikum_5/langkah_6.png)
+```dart
+import 'package:flutter/material.dart';
+import 'package:layout_flutter/models/item.dart';
+class HomePage extends StatelessWidget {
+  HomePage({super.key});
+
+  final List<Item> items = [
+    Item(name: 'Sugar', price: 5000),
+    Item(name: 'Salt', price: 2000),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Shopping List'),
+      ),
+      body: Container(
+        margin: const EdgeInsets.all(8),
+        child: ListView.builder(
+          padding: const EdgeInsets.all(8),
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            final item = items[index];
+            return InkWell(
+              onTap: () {
+                // Navigasi sambil mengirim data item yang diklik
+                Navigator.pushNamed(context, '/item', arguments: item);
+              },
+              child: Card(
+                child: Container(
+                  margin: const EdgeInsets.all(8),
+                  child: Row(
+                    children: [
+                      Expanded(child: Text(item.name)),
+                      Expanded(
+                        child: Text(
+                          item.price.toString(),
+                          textAlign: TextAlign.end,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+```
+
+![gambar 8](assets/praktikum_5/langkah_6)
 
 ### Langkah 7: Menambahkan aksi pada ListView
 Item pada ListView saat ini ketika ditekan masih belum memberikan aksi tertentu. Untuk menambahkan aksi pada ListView dapat digunakan widget InkWell atau GestureDetector. Perbedaan utamanya InkWell merupakan material widget yang memberikan efek ketika ditekan. Sedangkan GestureDetector bersifat umum dan bisa juga digunakan untuk gesture lain selain sentuhan. Pada praktikum ini akan digunakan widget InkWell.
@@ -380,6 +503,6 @@ final itemArgs = ModalRoute.of(context)!.settings.arguments as Item;
 
 ### Hasil
 
-![gambar 11](assets/tugas_praktikum_2/homepage.png)
+![gambar 9](assets/tugas_praktikum_2/homepage.png)
 
-![gambar 12](assets/tugas_praktikum_2/itempage.png)
+![gambar 10](assets/tugas_praktikum_2/itempage.png)
