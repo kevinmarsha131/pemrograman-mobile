@@ -468,7 +468,7 @@ class HomePage extends StatelessWidget {
 }
 ```
 
-![gambar 8](assets/praktikum_5/langkah_6)
+![gambar 8](assets/praktikum_5/langkah_6.png)
 
 ### Langkah 7: Menambahkan aksi pada ListView
 Item pada ListView saat ini ketika ditekan masih belum memberikan aksi tertentu. Untuk menambahkan aksi pada ListView dapat digunakan widget InkWell atau GestureDetector. Perbedaan utamanya InkWell merupakan material widget yang memberikan efek ketika ditekan. Sedangkan GestureDetector bersifat umum dan bisa juga digunakan untuk gesture lain selain sentuhan. Pada praktikum ini akan digunakan widget InkWell.
