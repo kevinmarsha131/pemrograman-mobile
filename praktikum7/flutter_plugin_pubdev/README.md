@@ -54,6 +54,11 @@ Setelah Anda menambahkan kode di atas, Anda akan mendapatkan info error. Mengapa
 
 ![gambar2](assets/langkah4/error_AutoSizeText.png)
 
+1. Variabel text Tidak Didefinisikan (Undefined Variable)
+Pada baris return AutoSizeText(text, ...);, kamu mencoba memasukkan variabel bernama text. Namun, variabel text tersebut belum pernah dideklarasikan di dalam class RedTextWidget.
+2. Widget AutoSizeText Membutuhkan Package Eksternal
+AutoSizeText bukanlah widget bawaan (native) dari Flutter. Widget ini berasal dari package pihak ketiga. Jika kamu langsung menuliskan AutoSizeText tanpa menginstal packagenya terlebih dahulu, Flutter tidak akan mengenali widget tersebut.
+
 ### Langkah 5: Buat Variabel text dan parameter di constructor
 Tambahkan variabel text dan parameter di constructor seperti berikut.
 
